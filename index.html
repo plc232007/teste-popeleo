@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Le&atilde;o XIV. Uma exposi&ccedil;&atilde;o visual sobre Robert Francis Prevost, sua forma&ccedil;&atilde;o agostiniana, a miss&atilde;o no Peru e os sinais do novo pontificado." />
+    <meta name="author" content="Seu Nome - Portfolio" />
+
+    <title>Le&atilde;o XIV - Exposi&ccedil;&atilde;o Sacra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div class="loader__inner">
+            <div class="loader__label">Habemus Papam</div>
+            <div class="loader__counter">
+                <span id="loader-percent">0</span><span>%</span>
+            </div>
+            <div class="loader__bar">
+                <div class="loader__bar-fill" id="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor">
+        <div class="cursor__dot"></div>
+        <div class="cursor__ring"></div>
+    </div>
+
+    <header class="nav" id="nav">
+        <div class="nav__logo">
+            <a href="#hero">Le&atilde;o XIV<sup>R</sup></a>
+        </div>
+        <nav class="nav__menu">
+            <a href="#vida" data-link>Vida</a>
+            <a href="#caminho" data-link>Caminho</a>
+            <a href="#insignia" data-link>Insignia</a>
+            <a href="#fontes" data-link>Fontes</a>
+        </nav>
+        <div class="nav__lang">PT / EN</div>
+    </header>
+
+    <main id="smooth-content">
+        <section class="hero" id="hero">
+            <div class="hero__meta">
+                <span>01 - Expositio</span>
+                <span>Anno Domini MMXXV</span>
+            </div>
+
+            <div class="hero__content">
+                <p class="hero__eyebrow">Uma leitura visual do 267&ordm; sucessor de Pedro</p>
+
+                <h1 class="hero__title">
+                    <span class="hero__line hero__line--left">
+                        <span class="hero__word hero__word--italic">Le&atilde;o</span>
+                    </span>
+                    <span class="hero__line hero__line--right">
+                        <span class="hero__word">XIV</span>
+                    </span>
+                </h1>
+
+                <p class="hero__lead">
+                    Robert Francis Prevost aparece aqui n&atilde;o s&oacute; como o novo Papa,
+                    mas como um agostiniano moldado pelo estudo, pela miss&atilde;o no Peru
+                    e por uma linguagem pastoral que olha para a tradi&ccedil;&atilde;o sem
+                    abandonar as quest&otilde;es do presente.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="button-link">Biografia oficial</a>
+                    <a href="https://www.vaticannews.va/en/pope/news/2025-05/cardinal-elected-pope-papal-name.html" target="_blank" rel="noreferrer" class="button-link button-link--ghost">Anuncio do Vaticano</a>
+                </div>
+            </div>
+
+            <canvas class="hero__canvas" id="hero-canvas"></canvas>
+
+            <div class="pope-orbit" aria-hidden="true">
+                <figure class="pope-float pope-float--center" data-depth="0" data-speed="0" data-rotate="0">
+                    <div class="pope-float__inner">
+                        <img src="assets/images/papa-removebg-preview.png" alt="Papa Le&atilde;o XIV em paramentos lit&uacute;rgicos" loading="eager" />
+                    </div>
+                </figure>
+                <figure class="pope-float pope-float--loggia" data-depth="30" data-speed="-16" data-rotate="4">
+                    <div class="pope-float__inner">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pope%20Leo%20XIV%20on%20the%20loggia.jpg?width=1280" alt="" loading="eager" />
+                    </div>
+                </figure>
+                <figure class="pope-float pope-float--portrait" data-depth="-18" data-speed="18" data-rotate="-4">
+                    <div class="pope-float__inner">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cardinal%20Robert%20F.%20Prevost%20at%20the%20Consistory%20on%2030%20September%202023%20(cropped%20portrait).jpg?width=960" alt="" loading="eager" />
+                    </div>
+                </figure>
+                <figure class="pope-float pope-float--young" data-depth="12" data-speed="-22" data-rotate="6">
+                    <div class="pope-float__inner">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Future%20Pope%20Leo%20XIV%20in%202012%20headshot.jpg?width=720" alt="" loading="eager" />
+                    </div>
+                </figure>
+            </div>
+
+            <div class="hero__floor">
+                <ul class="hero__facts">
+                    <li>
+                        <span class="hero__fact-value">267</span>
+                        <span class="hero__fact-label">Pontifice</span>
+                    </li>
+                    <li>
+                        <span class="hero__fact-value">1&ordm;</span>
+                        <span class="hero__fact-label">Dos EUA</span>
+                    </li>
+                    <li>
+                        <span class="hero__fact-value">1&ordm;</span>
+                        <span class="hero__fact-label">Agostiniano</span>
+                    </li>
+                    <li>
+                        <span class="hero__fact-value">5</span>
+                        <span class="hero__fact-label">Idiomas</span>
+                    </li>
+                </ul>
+
+                <div class="hero__footer">
+                    <p class="hero__caption">
+                        Eleito em 8 de maio de 2025, Le&atilde;o XIV une o peso simb&oacute;lico
+                        do nome papal &agrave; experi&ecirc;ncia concreta de miss&atilde;o,
+                        forma&ccedil;&atilde;o e governo eclesial.
+                    </p>
+                    <div class="hero__scroll">
+                        <span>Scroll</span>
+                        <span class="hero__scroll-arrow">&darr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Peace be with all of you</span>
+                <span>In Illo Uno Unum</span>
+                <span>Rerum Novarum</span>
+                <span>Ordo Sancti Augustini</span>
+                <span>Chiclayo</span>
+                <span>Peace be with all of you</span>
+                <span>In Illo Uno Unum</span>
+                <span>Rerum Novarum</span>
+                <span>Ordo Sancti Augustini</span>
+                <span>Chiclayo</span>
+            </div>
+        </div>
+
+        <section class="prologue" id="vida">
+            <div class="section-head">
+                <div class="section-kicker">02 - Vita</div>
+                <h2 class="section-title" data-split>Uma figura formada por estudo, vida comum e miss&atilde;o.</h2>
+                <p class="section-lead">
+                    Antes do balc&atilde;o central da Bas&iacute;lica, houve sala de aula,
+                    noviciado, semin&aacute;rio, par&oacute;quia, c&uacute;ria e estrada. A narrativa
+                    de Le&atilde;o XIV &eacute; menos linear do que monumental.
+                </p>
+            </div>
+
+            <div class="prologue__grid">
+                <article class="prologue__panel">
+                    <p>
+                        Nascido em Chicago em 14 de setembro de 1955, Robert Francis Prevost
+                        estudou Matem&aacute;tica na Villanova University e entrou no noviciado
+                        agostiniano em 1 de setembro de 1977.
+                    </p>
+                    <p>
+                        Ordenado sacerdote em 19 de junho de 1982, seguiu para o Peru e
+                        consolidou ali uma identidade pastoral muito concreta: forma&ccedil;&atilde;o,
+                        direito can&ocirc;nico, vida paroquial, governo e proximidade com a igreja local.
+                    </p>
+                    <p>
+                        Em 2015 foi nomeado bispo de Chiclayo e, no mesmo ano, tornou-se
+                        cidad&atilde;o peruano por naturaliza&ccedil;&atilde;o. Em 2023 foi chamado a Roma
+                        para chefiar o Dicast&eacute;rio para os Bispos e, em 2025, foi eleito Papa.
+                    </p>
+
+                    <div class="prologue__links">
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Ler a biografia da Santa S&eacute;</a>
+                        <a href="https://www.augustinianorder.org/post/el-agustino-robert-prevost-nuevo-prefecto-del-dicasterio-para-los-obispos?lang=es" target="_blank" rel="noreferrer" class="text-link">Ver o perfil agostiniano</a>
+                    </div>
+                </article>
+
+                <aside class="prologue__capsule">
+                    <div class="prologue__fact">
+                        <span class="prologue__fact-year">1977</span>
+                        <p>Gradua-se em Matem&aacute;tica e entra no noviciado agostiniano.</p>
+                    </div>
+                    <div class="prologue__fact">
+                        <span class="prologue__fact-year">1988</span>
+                        <p>Retorna ao Peru para a miss&atilde;o de Trujillo e a forma&ccedil;&atilde;o agostiniana.</p>
+                    </div>
+                    <div class="prologue__fact">
+                        <span class="prologue__fact-year">2015</span>
+                        <p>Torna-se bispo de Chiclayo e cidad&atilde;o peruano naturalizado.</p>
+                    </div>
+                    <div class="prologue__fact">
+                        <span class="prologue__fact-year">2025</span>
+                        <p>&Eacute; eleito em 8 de maio e assume o nome Le&atilde;o XIV.</p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="stats">
+                <div class="stats__item">
+                    <div class="stats__number">267</div>
+                    <div class="stats__label">Sucessor de Pedro</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number">1<sup>&ordm;</sup></div>
+                    <div class="stats__label">Papa dos EUA</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number">1<sup>&ordm;</sup></div>
+                    <div class="stats__label">Papa agostiniano</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number">5</div>
+                    <div class="stats__label">Idiomas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exhibit" id="caminho">
+            <div class="section-head">
+                <div class="section-kicker">03 - Itinerarium</div>
+                <h2 class="section-title" data-split>Tr&ecirc;s imagens para ler a sua forma&ccedil;&atilde;o.</h2>
+            </div>
+
+            <div class="exhibit__grid">
+                <article class="exhibit__card">
+                    <figure class="exhibit__media" data-parallax="14">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20of%20Robert%20Prevost%20in%20Villanova%20yearbook%201977.jpg?width=900" alt="Foto de Robert Prevost no anu&aacute;rio da Villanova University em 1977" loading="lazy" />
+                    </figure>
+                    <div class="exhibit__body">
+                        <div class="exhibit__label">Chicago / Villanova</div>
+                        <h3>Da matem&aacute;tica ao claustro</h3>
+                        <p>
+                            A juventude de Prevost n&atilde;o tem a apar&ecirc;ncia de um mito pronto:
+                            h&aacute; esporte, conselho estudantil, anu&aacute;rio, filosofia e uma gradua&ccedil;&atilde;o
+                            em Matem&aacute;tica antes da entrada formal no noviciado agostiniano.
+                        </p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte: biografia do Vaticano</a>
+                    </div>
+                </article>
+
+                <article class="exhibit__card">
+                    <figure class="exhibit__media" data-parallax="-10">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral%20of%20Chiclayo.jpg?width=1400" alt="Vista externa da Catedral de Chiclayo, no Peru" loading="lazy" />
+                    </figure>
+                    <div class="exhibit__body">
+                        <div class="exhibit__label">Peru mission&aacute;rio</div>
+                        <h3>Chulucanas, Trujillo, Chiclayo</h3>
+                        <p>
+                            A experi&ecirc;ncia peruana n&atilde;o foi epis&oacute;dica. Ela atravessa a sua
+                            biografia: miss&atilde;o, forma&ccedil;&atilde;o de candidatos, magist&eacute;rio, par&oacute;quia,
+                            chanceleria, episcopado e, por fim, a cidadania peruana.
+                        </p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte: Santa S&eacute; e Chiclayo</a>
+                    </div>
+                </article>
+
+                <article class="exhibit__card">
+                    <figure class="exhibit__media" data-parallax="12">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Augustine%20by%20Philippe%20de%20Champaigne.jpg?width=1200" alt="Pintura de Santo Agostinho" loading="lazy" />
+                    </figure>
+                    <div class="exhibit__body">
+                        <div class="exhibit__label">Matriz agostiniana</div>
+                        <h3>Uma alma e um cora&ccedil;&atilde;o voltados para Deus</h3>
+                        <p>
+                            Antes do papado, houve doze anos como Prior Geral da Ordem de Santo
+                            Agostinho. O repert&oacute;rio espiritual da unidade, do estudo e da caridade
+                            aparece de novo no lema e no bras&atilde;o do novo pontificado.
+                        </p>
+                        <a href="https://www.augustinianorder.org/post/mensaje-institucional-ante-la-elecci%C3%B3n-del-p-robert-prevost-osa-como-nuevo-papa-renovamos-nuestro?lang=es" target="_blank" rel="noreferrer" class="text-link">Fonte: Ordem de Santo Agostinho</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="insignia" id="insignia">
+            <div class="section-head">
+                <div class="section-kicker">04 - Insignia</div>
+                <h2 class="section-title" data-split>Nome, bras&atilde;o e lema como programa visual.</h2>
+            </div>
+
+            <div class="insignia__grid">
+                <figure class="insignia__art" data-parallax="-8">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Leone%20XIV.svg?width=900" alt="Bras&atilde;o papal de Le&atilde;o XIV" loading="lazy" />
+                </figure>
+
+                <div class="insignia__copy">
+                    <p class="insignia__lead">
+                        Em 10 de maio de 2025, ao explicar a escolha do nome, Le&atilde;o XIV
+                        evocou Le&atilde;o XIII e a <em>Rerum Novarum</em>, propondo uma leitura
+                        social do presente diante de uma nova revolu&ccedil;&atilde;o industrial e da intelig&ecirc;ncia artificial.
+                    </p>
+
+                    <ul class="insignia__list">
+                        <li><strong>Flor-de-lis.</strong> O campo azul do bras&atilde;o aponta para a dimens&atilde;o mariana e celeste.</li>
+                        <li><strong>Cora&ccedil;&atilde;o trespassado.</strong> O cora&ccedil;&atilde;o em chamas com seta retoma o emblema agostiniano e a linguagem de Santo Agostinho.</li>
+                        <li><strong>Livro aberto.</strong> O livro sinaliza a Palavra, o estudo e a tradi&ccedil;&atilde;o intelectual que marca a Ordem.</li>
+                        <li><strong>In Illo Uno Unum.</strong> O lema pode ser lido como: no Cristo &uacute;nico, muitos se tornam um.</li>
+                    </ul>
+
+                    <div class="insignia__links">
+                        <a href="https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/05/14/250514b.html" target="_blank" rel="noreferrer" class="button-link">Bras&atilde;o explicado</a>
+                        <a href="https://www.vaticannews.va/en/pope/news/2025-05/pope-leo-xiv-addresses-cardinals-10-may-2025-vatican.html" target="_blank" rel="noreferrer" class="button-link button-link--ghost">Por que Le&atilde;o XIV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline" id="pontificado">
+            <div class="section-head">
+                <div class="section-kicker">05 - Peregrinatio</div>
+                <h2 class="section-title" data-split>Uma trajet&oacute;ria que alterna claustro, estrada e c&aacute;tedra.</h2>
+            </div>
+
+            <div class="timeline__list">
+                <article class="timeline__item">
+                    <div class="timeline__year">1955</div>
+                    <div class="timeline__content">
+                        <h3>Inf&acirc;ncia em Chicago</h3>
+                        <p>Nasce em 14 de setembro, em uma fam&iacute;lia cat&oacute;lica profundamente ligada &agrave; vida paroquial e &agrave; educa&ccedil;&atilde;o.</p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte biogr&aacute;fica</a>
+                    </div>
+                </article>
+
+                <article class="timeline__item">
+                    <div class="timeline__year">1977</div>
+                    <div class="timeline__content">
+                        <h3>Villanova e noviciado</h3>
+                        <p>Conclui Matem&aacute;tica, aprofunda filosofia e entra no noviciado da Ordem de Santo Agostinho em Saint Louis.</p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte biogr&aacute;fica</a>
+                    </div>
+                </article>
+
+                <article class="timeline__item">
+                    <div class="timeline__year">1988</div>
+                    <div class="timeline__content">
+                        <h3>Miss&atilde;o e forma&ccedil;&atilde;o no Peru</h3>
+                        <p>Assume forma&ccedil;&atilde;o agostiniana em Trujillo, ensina direito can&ocirc;nico, moral e patr&iacute;stica, e segue no trabalho paroquial.</p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte biogr&aacute;fica</a>
+                    </div>
+                </article>
+
+                <article class="timeline__item">
+                    <div class="timeline__year">2001</div>
+                    <div class="timeline__content">
+                        <h3>Prior Geral da Ordem</h3>
+                        <p>&Eacute; eleito Prior Geral dos agostinianos e confirmado para um segundo mandato em 2007, ampliando sua experi&ecirc;ncia internacional de governo.</p>
+                        <a href="https://www.augustinianorder.org/post/el-agustino-robert-prevost-nuevo-prefecto-del-dicasterio-para-los-obispos?lang=es" target="_blank" rel="noreferrer" class="text-link">Fonte agostiniana</a>
+                    </div>
+                </article>
+
+                <article class="timeline__item">
+                    <div class="timeline__year">2023</div>
+                    <div class="timeline__content">
+                        <h3>Roma, Dicast&eacute;rio e cardinalato</h3>
+                        <p>Francisco o chama a Roma como Prefeito do Dicast&eacute;rio para os Bispos; em setembro, ele &eacute; criado cardeal.</p>
+                        <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Fonte biogr&aacute;fica</a>
+                    </div>
+                </article>
+
+                <article class="timeline__item timeline__item--highlight">
+                    <div class="timeline__year">2025</div>
+                    <div class="timeline__content">
+                        <h3>Habemus Papam</h3>
+                        <p>Em 8 de maio de 2025 &eacute; eleito no conclave, tornando-se o primeiro Papa nascido nos Estados Unidos e o primeiro agostiniano a ocupar a s&eacute; de Pedro.</p>
+                        <a href="https://www.vaticannews.va/en/pope/news/2025-05/cardinal-elected-pope-papal-name.html" target="_blank" rel="noreferrer" class="text-link">Ver anuncio do Vaticano</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="quote" id="mensagens">
+            <div class="quote__panel">
+                <div class="quote__meta">06 - Vox</div>
+                <blockquote class="quote__text">
+                    <em>&ldquo;Peace be with all of you!&rdquo;</em>
+                </blockquote>
+                <cite class="quote__cite">Primeiras palavras de Le&atilde;o XIV na loggia de S&atilde;o Pedro, em 8 de maio de 2025.</cite>
+                <p class="quote__support">
+                    Dois dias depois, ao falar aos cardeais, ele explicou que o nome Le&atilde;o
+                    olha para a heran&ccedil;a social de Le&atilde;o XIII e para os desafios de um novo tempo,
+                    sobretudo aqueles ligados ao trabalho, &agrave; dignidade humana e &agrave; intelig&ecirc;ncia artificial.
+                </p>
+            </div>
+        </section>
+
+        <section class="library" id="fontes">
+            <div class="section-head">
+                <div class="section-kicker">07 - Bibliotheca</div>
+                <h2 class="section-title" data-split>Links para continuar a leitura.</h2>
+                <p class="section-lead">
+                    Todos os fatos principais desta p&aacute;gina se apoiam em documentos e mat&eacute;rias
+                    institucionais. A ideia aqui &eacute; que o site convide a continuar estudando.
+                </p>
+            </div>
+
+            <div class="library__grid">
+                <article class="library__card">
+                    <div class="library__label">Santa S&eacute;</div>
+                    <h3>Biografia oficial</h3>
+                    <p>Datas, forma&ccedil;&atilde;o, miss&atilde;o no Peru, episcopado, c&uacute;ria e elei&ccedil;&atilde;o.</p>
+                    <a href="https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html" target="_blank" rel="noreferrer" class="text-link">Abrir no Vatican.va</a>
+                </article>
+
+                <article class="library__card">
+                    <div class="library__label">Vatican News</div>
+                    <h3>Anuncio da elei&ccedil;&atilde;o</h3>
+                    <p>O registro do momento em que Robert Francis Prevost se torna Le&atilde;o XIV.</p>
+                    <a href="https://www.vaticannews.va/en/pope/news/2025-05/cardinal-elected-pope-papal-name.html" target="_blank" rel="noreferrer" class="text-link">Ler a mat&eacute;ria</a>
+                </article>
+
+                <article class="library__card">
+                    <div class="library__label">Sala de Imprensa</div>
+                    <h3>Bras&atilde;o e lema</h3>
+                    <p>A explica&ccedil;&atilde;o oficial do bras&atilde;o papal, da flor-de-lis ao cora&ccedil;&atilde;o agostiniano.</p>
+                    <a href="https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/05/14/250514b.html" target="_blank" rel="noreferrer" class="text-link">Ver explica&ccedil;&atilde;o</a>
+                </article>
+
+                <article class="library__card">
+                    <div class="library__label">Ordem de Santo Agostinho</div>
+                    <h3>Leitura da tradi&ccedil;&atilde;o</h3>
+                    <p>Um lembrete de que o novo Papa tamb&eacute;m carrega a mem&oacute;ria viva da fam&iacute;lia agostiniana.</p>
+                    <a href="https://www.augustinianorder.org/post/mensaje-institucional-ante-la-elecci%C3%B3n-del-p-robert-prevost-osa-como-nuevo-papa-renovamos-nuestro?lang=es" target="_blank" rel="noreferrer" class="text-link">Ler a mensagem</a>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer" id="contato">
+            <div class="footer__top">
+                <h2 class="footer__title">
+                    Pax <em>Vobis</em>
+                </h2>
+            </div>
+
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__label">Sede</div>
+                    <p>Cidade do Vaticano<br />00120 Roma, It&aacute;lia</p>
+                </div>
+                <div>
+                    <div class="footer__label">Leituras</div>
+                    <p><a href="https://www.vaticannews.va/en.html" target="_blank" rel="noreferrer">Vatican News</a><br /><a href="https://www.vatican.va/content/leo-xiv/en.html" target="_blank" rel="noreferrer">Santa S&eacute;</a><br /><a href="https://www.osservatoreromano.va/" target="_blank" rel="noreferrer">L'Osservatore Romano</a></p>
+                </div>
+                <div>
+                    <div class="footer__label">Temas</div>
+                    <p>Chicago e Villanova<br />Miss&atilde;o peruana<br />Heran&ccedil;a agostiniana</p>
+                </div>
+                <div>
+                    <div class="footer__label">Projeto</div>
+                    <p>Pe&ccedil;a editorial em HTML, CSS, JS, GSAP e Lenis, com informa&ccedil;&otilde;es confirmadas em fontes institucionais.</p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>&copy; <span data-year>2026</span> - Portfolio</span>
+                <span>Exposi&ccedil;&atilde;o visual sobre Le&atilde;o XIV</span>
+            </div>
+            <p class="footer__credits">
+                Imagens: arquivo local do Papa ao centro; Wikimedia Commons para a loggia, retrato cardinal&iacute;cio,
+                retrato de 2012, Villanova 1977, Catedral de Chiclayo, arte de Santo Agostinho e bras&atilde;o papal.
+            </p>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+    <script src="js/loader.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
