@@ -81,10 +81,16 @@ Site visual e estrutural inspirado em:
 - Editorial design tradition (revistas católicas, *L'Osservatore Romano*)
 - Tipografia papal — serifa elegante (Cormorant Garamond)
 
+## ✦ Imagens
+
+Todas as fotografias e o brasão são servidos localmente a partir de `assets/images/`,
+obtidos no [Wikimedia Commons](https://commons.wikimedia.org/) (licenças livres).
+Nenhuma imagem é hotlinkada — o site funciona offline e não depende de rate limits externos.
+
 ## ✦ Licença
 
 Código MIT. Conteúdo biográfico de domínio público / fair use educacional.
 
 ---
 
-Desenvolvido com ✦ por [Seu Nome] como peça de portfólio — 2025.
+Desenvolvido com ✦ por Pedro Leite Campos como peça de portfólio — 2025.
